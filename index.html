@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPTCHA Generator</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a modern, clean typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Card Container -->
+    <div class="captcha-card">
+        <h2>Security Check</h2>
+        <p class="subtitle">Please enter the CAPTCHA below</p>
+        
+        <!-- Display and Refresh area -->
+        <div class="captcha-display-container">
+            <div class="captcha-box" id="captcha-box">
+                <!-- Captcha text will be injected here by JavaScript -->
+            </div>
+            
+            <!-- Refresh Button with an SVG icon -->
+            <button class="refresh-btn" id="refresh-btn" aria-label="Refresh Captcha">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <polyline points="1 20 1 14 7 14"></polyline>
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Input field for user guess -->
+        <div class="input-container">
+            <input type="text" id="captcha-input" placeholder="Enter CAPTCHA" autocomplete="off" />
+        </div>
+
+        <!-- Submit validation button -->
+        <button class="submit-btn" id="submit-btn" type="button">Verify</button>
+
+        <!-- Message feedback (Correct / Wrong) -->
+        <div class="message" id="message"></div>
+    </div>
+    
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
